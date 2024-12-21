@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from "../Components/Image/myprofile.png";
+import myProfile from '../../Image/myprofile.png';
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
                 <button className='border-spacing-1 rounded-md p-2 px-3 border-2  border-blue-500 shadow-gray-300'>My Project</button>
             </div>
             <div className='flex items-center justify-center lg:w-1/2'>
-               <img className='w-[300px] rounded-full  '  src={Image} alt="" />
+               <img className='w-[300px] rounded-full  '  src={myProfile} alt="" />
             </div>
         </div>
       
