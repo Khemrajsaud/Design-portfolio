@@ -81,9 +81,9 @@ const Navbar = () => {
         </ul>
 
         {/* Hire Me Button */}
-        <button className="hidden md:block mr-12 bg-blue-600 p-2 rounded-md hover:bg-blue-700 transition">
+        <a href="http://localhost:5173/#contacts"><button className="hidden md:block mr-12 bg-blue-600 p-2 rounded-md hover:bg-blue-700 transition">
           Hire me
-        </button>
+        </button></a>
 
         {/* Mobile Menu Toggle Icon */}
         <div

@@ -27,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <div className={`${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className={`${theme === 'dark' ? 'bg-black text-white ' : 'bg-white text-black '}`}>
       {/* Theme Toggle Button */}
       
 

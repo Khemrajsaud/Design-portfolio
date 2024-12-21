@@ -26,30 +26,30 @@ const Skill = () => {
 
             <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-orange-500 '>
             <FaHtml5 className='text-center text-9xl ml-[90px] mt-3' />
-            <p className='text-2xl text-center'>ReactJs</p>
+            <p className='text-2xl text-center'>HTML</p>
             </div>
 
             <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-blue-600'>
            
             < FaCss3Alt className='text-center text-9xl ml-[90px] mt-3'/>
-            <p className='text-2xl text-center'>ReactJs</p>
+            <p className='text-2xl text-center'>Css</p>
             </div>
           
                 <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-yellow-600'>
              < IoLogoJavascript className='text-center text-9xl ml-[90px] mt-3'/>
-             <p className='text-2xl text-center'>ReactJs</p>
+             <p className='text-2xl text-center'>Javascript</p>
                          </div>
                          <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-blue-600'>
                           <RiTailwindCssFill className='text-center text-9xl ml-[90px] mt-3'/>
-                          <p className='text-2xl text-center'>ReactJs</p>
+                          <p className='text-2xl text-center'>TailwindCss</p>
                           </div>
                       <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-blue-500'>        
                      <FaWordpress className='text-center text-9xl ml-[90px] mt-3'/>
-                     <p className='text-2xl text-center'>ReactJs</p>
+                     <p className='text-2xl text-center'>Wordpres</p>
                        </div>
                       <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-gray-950'>
                      <FaGithub className='text-center text-9xl ml-[90px] mt-3' />
-                     <p className='text-2xl text-center'>ReactJs</p>
+                     <p className='text-2xl text-center'>Github</p>
                     </div>
     </div>
     </div>

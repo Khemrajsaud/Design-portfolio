@@ -11,8 +11,8 @@ const About = () => {
             <h1  className='text-3xl  font-bold underline decoration-4 decoration-pink-500  underline-offset-8  '>About Me</h1>
             
                 <h3 className='font-bold text-xl'>Hello, I am <span className='text-green-500'> Khemraj Saud</span></h3>
-                <h1 className='text-3xl font-bold '>I am a Full stack Mern Developer.</h1>
-                <p className=' text-justify '>Through extensive research on online resources as well as self-guided learning and hands-on projects, I have gained proficiency in the MERN stack, encompassing MongoDB, Express.js, React.js, and Node.js. My goal is to leverage my skills and knowledge to contribute to innovative web applications that solve real-world problems. I am excited to embark on a career path that aligns with my passion for coding and problem-solving. I am open to internships, freelance projects, or entry-level positions that offer the opportunity to learn and grow.</p>
+                <h1 className='text-3xl font-bold '>I am a Mern stack Developer.</h1>
+                <p className=' text-justify '>I’m Khemraj Saud, a frontend developer with a strong passion for creating visually appealing and highly functional web applications. My journey in web development began with a curiosity for design and evolved into a full-fledged passion for coding.I specialize in ReactJS and JavaScript, crafting responsive, user-centric interfaces that deliver seamless digital experiences. Currently, I’m exploring Next.js and MongoDB to enhance my backend and full-stack development skills.</p>
                 
                     
                 </div>
