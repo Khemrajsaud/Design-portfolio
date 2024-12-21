@@ -1,7 +1,7 @@
 {
 
 
-  "homepage": "https://github.com/Khemrajsaud/Design-portfolio.git",
+ "homepage": "/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy" : "gh-pages -d build"
+    
 
   },
   "dependencies": {
