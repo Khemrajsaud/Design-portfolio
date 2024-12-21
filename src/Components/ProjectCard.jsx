@@ -60,7 +60,7 @@ const [currentPfoject, setCurrentProject] = useState(0)
         </div>
 
       </div>
-      <ul className="grid grid-cols-1 gap-2 lg:ml-[350px] sm:w-[100px]  ">
+      <ul className="grid grid-cols-1 gap-2 lg:ml-[350px] sm:w-[100px]   ">
         {projects.map((project,index) =>(
           <li key={index} onClick={()=> setCurrentProject(index)} className={`cursor-pointer text-gray-300 bg-slate-700 rounded-lg p-2 text-center lg:max-w-[100px] hover:bg-slate-800 transition duration-300 ${currentPfoject === index? "bg-slate-900" : "" }`}>
             {project.title}
