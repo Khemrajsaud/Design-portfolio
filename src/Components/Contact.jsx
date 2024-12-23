@@ -27,11 +27,11 @@ const Contact = () => {
   };
   return (
     <div className="bg-red-100">
-      <h1 className="lg:text-center text-3xl font-bold underline decoration-pink-600 decoration-4 pt-8">
+      <h1 className="lg:text-center text-3xl font-bold underline decoration-pink-600 pl-6 decoration-4 pt-8">
         Contact Me
       </h1>
       {/* Parent Flex Container */}
-      <div className="lg:flex  p-3 lg-9 my-12 ">
+      <div className="lg:flex  p-3  my-12 ">
         {/* Left Section */}
         <div className=" lg:w-[45%] ">
           <h1 className="lg:text-2xl font-bold mb-4">Let's Work Together</h1>
