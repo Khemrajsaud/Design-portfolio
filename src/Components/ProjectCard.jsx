@@ -10,7 +10,7 @@ const projects = [
     title: "Project #1",
     description: "UI for fronted development using React",
     links: {
-      site: "https://www.netflix.com/np/",
+      site: "https://e-commercesiteshop.netlify.app/",
       github: "https://github.com/Khemrajsaud",
     },
   },
@@ -18,9 +18,9 @@ const projects = [
     imgs: project2,
     title: "Project #2",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic tenetur vero atque aliquam enim odit, aut accusantium! Voluptate accusantium mollitia laudantium blanditiis doloribus numquam sit fugiat inventore dolorem rem",
+      "UI for fronted development using React",
     links: {
-      site: "#",
+      site: "https://todoappdesign.netlify.app",
       github: "#",
     },
   },
@@ -29,7 +29,7 @@ const projects = [
     title: "Project #3",
     description: "UI for fronted development using React",
     links: {
-      site: "#",
+      site: "https://newmoderncalculator.netlify.app/",
       github: "#",
     },
   },
@@ -52,7 +52,7 @@ const ProjectCard = () => {
             <img
               src={projects[currentPfoject].imgs}
               alt={projects[currentPfoject].title}
-              className="w-full h-full object-cover rounded-lg mb-4"
+              className="w-[400px] object-cover rounded-lg mb-4"
             />
           </div>
           <p className="text-gray-800 my-4">
