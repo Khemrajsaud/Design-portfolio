@@ -1,95 +1,55 @@
-import React, { useState } from "react";
-
-import project1 from "../Components/Image/project1.png";
-import project2 from "../Components/Image/project2.png";
-import project3 from "../Components/Image/project3.png";
-import { FaGithub } from "react-icons/fa";
-const projects = [
-  {
-    imgs: project1,
-    title: "Project #1",
-    description: "UI for fronted development using React",
-    links: {
-      site: "https://e-commercesiteshop.netlify.app/",
-      github: "https://github.com/Khemrajsaud",
-    },
-  },
-  {
-    imgs: project2,
-    title: "Project #2",
-    description:
-      "UI for fronted development using React",
-    links: {
-      site: "https://todoappdesign.netlify.app",
-      github: "#",
-    },
-  },
-  {
-    imgs: project3,
-    title: "Project #3",
-    description: "UI for fronted development using React",
-    links: {
-      site: "https://newmoderncalculator.netlify.app/",
-      github: "#",
-    },
-  },
-];
+import React from "react";
+import { FaArrowRight, FaGithub } from "react-icons/fa";
+import { workData } from "./Assets";
 
 const ProjectCard = () => {
-  const [currentPfoject, setCurrentProject] = useState(0);
-
   return (
-    <div className=" flex-col  bg-red-80   " id="portfolio">
-      <h1
-        className="text-3xl text-center font-bold underline decoration-4 decoration-pink-500  underline-offset-8
-        pt-8  "
-      >
-        Latest Project
-      </h1>
-      <div className=" py-10">
-        <div className="p-6 lg:ml-[350px] border-2 lg:w-1/2 rounded-md ">
-          <div className=" rounded-md bg-gray-100  shadow-lg ">
-            <img
-              src={projects[currentPfoject].imgs}
-              alt={projects[currentPfoject].title}
-              className="w-[400px] object-cover rounded-lg mb-4"
-            />
-          </div>
-          <p className="text-gray-800 my-4">
-            {projects[currentPfoject].description}
-          </p>
-          <div className="flex space-x-4">
-            <a
-              href={projects[currentPfoject].links.site}
-              className="px-4 py-2 bg-slate-500 text-gray-200 rounded-lg hover:bg-slate-700 transition duration-300"
-            >
-              view site
-            </a>
-            <a
-              className="px-5 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-200"
-              href={projects[currentPfoject].links.github}
-            >
-              <FaGithub />
-            </a>
-          </div>
-        </div>
+    <div id="work" className="w-full px-[10%] py-16 ">
+      {/* Section Heading */}
+      <h4 className="text-center text-lg text-gray-600 dark:text-gray-400">My Portfolio</h4>
+      <h2 className="text-center text-5xl font-bold text-gray-900 dark:text-white">My Latest Work</h2>
+      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 text-gray-600 dark:text-gray-400">
+        Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
+      </p>
 
-        <div>
-          <ul className=" flex flex-col w-[200px] gap-2 lg:ml-[350px] mt-3 ml-[80px]">
-            {projects.map((project, index) => (
-              <li
-                key={index}
-                onClick={() => setCurrentProject(index)}
-                className={`cursor-pointer text-gray-100 bg-slate-700 rounded-md p-2  text-center  hover:bg-slate-800 transition duration-300 ${
-                  currentPfoject === index ? "bg-slate-900" : ""
-                }`}
-              >
-                {project.title}
-              </li>
-            ))}
-          </ul>
-          <div></div>
-        </div>
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {workData.map(({ title, description, bgImage, links }, index) => (
+          <div key={index} className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
+            {/* Project Image */}
+            <img src={bgImage} alt={title} className="w-full h-48 object-cover" />
+
+            {/* Project Details */}
+            <div className="p-5">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
+              <p className="text-sm text-gray-500">{description}</p>
+
+              {/* Buttons */}
+              <div className="mt-4 flex items-center justify-between">
+                {links?.site && (
+                  <a
+                    href={links.site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium"
+                  >
+                    View Project <FaArrowRight />
+                  </a>
+                )}
+                {links?.github && (
+                  <a
+                    href={links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white text-2xl"
+                  >
+                    <FaGithub />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

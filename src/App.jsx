@@ -20,7 +20,7 @@ const App = () => {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [isDarkMode]); // 🔥 Fix: Run effect when `isDarkMode` changes
+  }, [isDarkMode]); 
 
   return (
     <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>

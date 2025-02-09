@@ -30,21 +30,20 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ))}
       </ul>
 
-      {/* Right Side Icons */}
+    
       <div className="flex items-center gap-4">
-        {/* Dark Mode Toggle */}
+      
         <button onClick={() => setIsDarkMode((prev) => !prev)}>
           <img src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Theme Toggle" className="w-6" />
         </button>
 
-        {/* Contact Button (Desktop) */}
-        <a className="hidden md:block border border-black text-black rounded-full px-6 py-2 lg:flex items-center gap-3"
+    
+        <a className={`hidden md:block border border-gray-500 text-black rounded-full px-6 py-2 lg:flex items-center gap-3" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
           href="#contacts">
           Contact
           <img src={assets.right_arrow} alt="Arrow" className="w-3" />
         </a>
 
-        {/* Mobile Menu Button */}
         <button className="block md:hidden ml-3" onClick={toggleMenu}>
           <FaBars className="text-2xl" />
         </button>

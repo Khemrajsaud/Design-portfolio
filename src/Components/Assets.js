@@ -17,6 +17,10 @@ import mongodb from './Image/mongodb.png'
 import firebase from './Image/firebase.png'
 import git from './Image/git.png'
 import figma from './Image/figma.png'
+import work_1 from './Image/work-1.png'
+import work_2 from './Image/work-2.png'
+import work_3 from './Image/work-2.png'
+import work_4 from './Image/work-3.png'
 
 
 
@@ -28,7 +32,7 @@ export const assets = {
     close_white,hand_icon,
     download_icon,about_me,
     code_icon, code_icon_dark, edu_icon, edu_icon_dark , project_icon, project_icon_dark,vs_code,
-    mongodb, firebase, git,figma
+    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4
   
 };
 
@@ -58,3 +62,43 @@ export const toolsData =[
     
     
 ]
+
+export const workData = [
+    {
+        title: 'Frontend project',
+        description: 'Web Design',
+        bgImage: assets.work_1,
+        links: {
+            site: "https://e-commercesiteshop.netlify.app/",
+            github: "https://github.com/Khemrajsaud",
+        },
+    },
+    {
+        title: 'Geo based app',
+        description: 'Mobile App',
+        bgImage: assets.work_2,
+        links: {
+            site: "https://todoappdesign.netlify.app",
+            github: "#",
+        },
+    },
+    {
+        title: 'Photography site',
+        description: 'Web Design',
+        bgImage: assets.work_3,
+        links: {
+            site: "https://todoappdesign.netlify.app", // No link, but avoids undefined error
+            github: "#",
+        },
+    },
+    {
+        title: 'UI/UX designing',
+        description: 'UI/UX Design',
+        bgImage: assets.work_4,
+        links: {
+            site: "https://todoappdesign.netlify.app",
+            github: "#",
+        },
+    },
+];
+
