@@ -26,7 +26,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="bg-red-100">
+    <div className=" container mx-8">
       <h1 className="lg:text-center text-3xl font-bold underline decoration-pink-600 pl-6 decoration-4 pt-8">
         Contact Me
       </h1>
@@ -73,19 +73,19 @@ const Contact = () => {
         {/* Right Section (Contact Form) */}
        
 
-        <div className="lg:w-[30%] lg:ml-[150px] w-full bg-gray-200 lg:p-4 rounded-lg shadow-lg">
+        <div className="lg:w-[30%] lg:ml-[150px] w-full  lg:p-4 rounded-lg shadow-lg">
         <form ref={form} onSubmit={sendEmail}>
           <input
             type="text"
             placeholder="Full Name"
             name="to_name"
-            className="w-full my-2 bg-gray-100 border-t-4 border-indigo-500 shadow-gray-500 shadow-md text-black rounded-md focus:outline-none p-3"
+            className="w-full my-2 bg-gray-100 border-t-4  shadow-gray-500 shadow-md text-black rounded-md focus:outline-none p-3"
           />
           <input
             type="email"
             placeholder="Email Address"
             name="from_name"
-            className="w-full my-2 border-t-4 border-indigo-500   shadow-gray-500 shadow-md text-black  rounded-md focus:outline-none p-3"
+            className="w-full my-2 border-t-4    shadow-gray-500 shadow-md text-black  rounded-md focus:outline-none p-3"
           />
           
           
@@ -93,10 +93,10 @@ const Contact = () => {
             name="message"
             placeholder="Your Message"
             rows="4"
-            className="w-full my-2 border-t-4 border-indigo-500  shadow-gray-500 shadow-md text-black  rounded-md focus:outline-none p-3"
+            className="w-full my-2 border-t-4   shadow-gray-500 shadow-md text-black  rounded-md focus:outline-none p-3"
           ></textarea>
           
-          <input type="submit" value="Send" className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-green-600 transition cursor-pointer" />
+          <input type="submit" value="Send" className="w-full text-white py-3 rounded-md hover:bg-green-600 transition cursor-pointer" />
           </form>
         </div>
        

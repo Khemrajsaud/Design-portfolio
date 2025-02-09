@@ -1,68 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-
-
-import Navbar from './Components/Navbar';
-import About from './Components/About';
-import Home from './Components/Home';
-import Skill from './Components/Skill';
-import Contact from './Components/Contact';
-import ProjectCard from './Components/ProjectCard';
-import Footer from './Components/Footer';
-
-
-
-
+import React, { useEffect, useState } from "react";
+import Navbar from "./Components/Navbar";
+import About from "./Components/About";
+import Home from "./Components/Home";
+import Skill from "./Components/Skill";
+import Contact from "./Components/Contact";
+import ProjectCard from "./Components/ProjectCard";
+import Footer from "./Components/Footer";
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
-  // Apply theme class
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkMode]); // 🔥 Fix: Run effect when `isDarkMode` changes
 
   return (
-    <div className={`${theme === 'dark' ? 'bg-black text-white ' : 'bg-white text-black '}`}>
-      {/* Theme Toggle Button */}
+    <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       
+      <section id="home">
+        <Home isDarkMode={isDarkMode} />
+      </section>
 
-      {/* Navbar */}
-       <Navbar />
-       <button onClick={toggleTheme} className="  right-9 mt-5 z-20 absolute bottom-2 ">
-        {theme === 'light' ? (
-          <MdOutlineLightMode className="text-2xl text-gray-900" />
-        ) : (
-          <MdOutlineDarkMode className="text-2xl text-gray-300" />
-        )}
-      </button>
-       <section id='home'>
-        <Home/>
-       </section>
+      <section id="about">
+        <About isDarkMode={isDarkMode} />
+      </section>
 
-       <section id='about'>
-        <About/>
-       </section>
-       <section id='skills'>
-        <Skill/>
-       </section>
-       <section id='projects'>
-        <ProjectCard/>
-       </section>
+      <section id="skills">
+        <Skill isDarkMode={isDarkMode} />
+      </section>
 
+      <section id="projects">
+        <ProjectCard isDarkMode={isDarkMode} />
+      </section>
 
-       <section id='contacts'>
-        <Contact/>
-        
-       </section>
-       <Footer/>
-     
-      
-    </div> 
+      <section id="contacts">
+        <Contact isDarkMode={isDarkMode} />
+      </section>
+
+      <Footer isDarkMode={isDarkMode} />
+    </div>
   );
 };
 

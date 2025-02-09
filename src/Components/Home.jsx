@@ -1,23 +1,32 @@
 import React from 'react'
 import myProfile from "../Components/Image/myProfile.png"
+import { assets } from './Assets'
 
 const Home = () => {
   return (
-    <div className='bg-red-100'>
-        <div className='lg:flex items-center justify-between  md:grid-flow-col gap-8'>
-            <div className=' lg:w-1/2 lg:my-28 p-6 '>
-                <h3 className=' text-2xl font-bold'>Hi I'm Khemraj Saud</h3><br />
-                <h1 className='text-4xl font-bold   md:text-2xl text-yellow-500 '> Mern Stack Developer</h1><br /><br />
-                <p className=''>I am a dedicated and passionate MERN-Stack developer with a strong foundation in modern web development technologies.My goal is to leverage my skills and knowledge to contribute to innovative web applications that solve real-world problems.</p>
-                <br />
+    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 '>
 
-                <button className='border-spacing-1 rounded-md p-2 px-3 border-2  border-blue-500 shadow-gray-300'>My Project</button>
-            </div>
-            <div className='flex items-center justify-center lg:w-1/2 pb-8'>
-               <img className='lg:w-[300px] w-[250px] rounded-full  '  src={myProfile} alt="" />
-            </div>
-        </div>
-      
+      <div className='mt-[100px]'>
+        <img src={myProfile} alt="" className='rounded-full w-32' />
+      </div>
+      <h3 className=' flex items-end gap-2 text-xl md:text-2xl mb-3'>Hi ! I'm Khemraj Saud 
+        <img src={assets.hand_icon} alt="" className='w-6' />
+      </h3>
+      <h1 className='text-3xl sm:text-6xl lg:text-[66px]' >
+        Frontend Web developer based in Nepal
+      </h1>
+      <p  className='max-w-2xl mx-auto '>
+      I am a dedicated and passionate MERN-Stack developer with a strong foundation in modern web development technologies.My goal is to leverage my skills and knowledge to contribute to innovative web applications that solve real-world problems.
+      </p>
+
+      <div className='flex flex-col sm:flex-row items-center gap-4 ,t-4'>
+        <a href="" className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 '>Contact me
+           <img src={assets.right_arrow} alt="" className='w-4' /></a>
+
+           <a href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>My resume
+           <img src={assets.download_icon} alt="" className='w-4' /></a>
+      </div>
+
     </div>
   )
 }

@@ -9,13 +9,13 @@ import { FaGithub } from "react-icons/fa";
 
 const Skill = () => {
   return (
-    <div className='bg-gray-100 shadow-md p-9  '>
+    <div className=''>
      
-      <h1 className='text-3xl font-bold underline decoration-pink-500 decoration-4  '>Skill</h1>
-      <p className='my-5'>These are the technologies I have learned </p>
+      <h1 className=' text-center text-5xl'>Skill</h1>
+      <p className=' text-center py-4'>These are the technologies I have learned </p>
     
       
-        <div className=' grid lg:grid-cols-4 md:grid-cols-2 gap-10  '>
+        <div className=' grid lg:grid-cols-3 md:grid-cols-2 gap-6 ml-20  '>
             <div className='bg-white shadow-md shadow-gray-400  w-[300px] h-[200px] rounded-md pl-19 text-teal-400'>
             
             

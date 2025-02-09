@@ -1,164 +1,77 @@
-// import React from 'react';
-
-// const Navbar = () => {
-//   return (
-//     <nav className=" top-0 left-0 w-full bg-gray-800 text-white p-4">
-       
-//       <div className=" flex justify-between items-center">
-//         {/* Logo */}
-//         <div className="text-2xl font-bold">KS</div>
-
-//         {/* Navbar Links */}
-//         <ul className="flex space-x-6 ">
-//           <li>
-//             <a href="#home" className="hover:text-gray-400">Home</a>
-//           </li>
-//           <li>
-//             <a href="#about" className="hover:text-gray-400">About</a>
-//           </li>
-//           <li>
-//             <a href="#skills" className="hover:text-gray-400">Skills</a>
-//           </li>
-//           <li>
-//             <a href="#projects" className="hover:text-gray-400">Projects</a>
-//           </li>
-//           <li>
-//             <a href="#contact" className="hover:text-gray-400">Contact</a>
-//           </li>
-          
-//         </ul>
-//         <button className='mr-12 bg-blue-600 p-2 rounded-md'>Hire me</button>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-import React, { useState } from "react";
+import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../Components/Image/logo2.png";
+import { assets } from "./Assets";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="top-0 left-0 w-full bg-gray-800 text-white p-4">
-      <div className="flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold">KS</div>
+    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between 
+        ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}>
+      
+      {/* Logo */}
+      <div className="text-2xl font-bold">
+        <img className="w-[100px]" src={logo} alt="Logo" />
+      </div>
 
-        {/* Desktop Navbar Links */}
-        <ul className="hidden md:flex space-x-6">
-          <li>
-            <a href="#home" className="hover:text-gray-400">
-              Home
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
+        {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+          <li key={item}>
+            <a href={`#${item.toLowerCase()}`} className="hover:text-gray-400">
+              {item}
             </a>
           </li>
-          <li>
-            <a href="#about" className="hover:text-gray-400">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="hover:text-gray-400">
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-gray-400">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contacts" className="hover:text-gray-400">
-              Contact
-            </a>
-          </li>
-        </ul>
+        ))}
+      </ul>
 
-        {/* Hire Me Button */}
-        <a href="http://localhost:5173/#contacts"><button className="hidden md:block mr-12 bg-blue-600 p-2 rounded-md hover:bg-blue-700 transition">
-          Hire me
-        </button></a>
+      {/* Right Side Icons */}
+      <div className="flex items-center gap-4">
+        {/* Dark Mode Toggle */}
+        <button onClick={() => setIsDarkMode((prev) => !prev)}>
+          <img src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Theme Toggle" className="w-6" />
+        </button>
 
-        {/* Mobile Menu Toggle Icon */}
-        <div
-          className="md:hidden cursor-pointer"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? (
-            <FaTimes className="text-2xl" />
-          ) : (
-            <FaBars className="text-2xl" />
-          )}
-        </div>
+        {/* Contact Button (Desktop) */}
+        <a className="hidden md:block border border-black text-black rounded-full px-6 py-2 lg:flex items-center gap-3"
+          href="#contacts">
+          Contact
+          <img src={assets.right_arrow} alt="Arrow" className="w-3" />
+        </a>
+
+        {/* Mobile Menu Button */}
+        <button className="block md:hidden ml-3" onClick={toggleMenu}>
+          <FaBars className="text-2xl" />
+        </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <ul className="md:hidden bg-gray-700 text-center space-y-4 p-4">
-          <li>
-            <a
-              href="#home"
-              className="block hover:text-gray-400"
-              onClick={toggleMenu}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              className="block hover:text-gray-400"
-              onClick={toggleMenu}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              className="block hover:text-gray-400"
-              onClick={toggleMenu}
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="block hover:text-gray-400"
-              onClick={toggleMenu}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className="block hover:text-gray-400"
-              onClick={toggleMenu}
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <button
-              className="bg-blue-600 p-2 rounded-md w-full hover:bg-blue-700 transition"
-              onClick={toggleMenu}
-            >
-              Hire me
-            </button>
-          </li>
+      <div className={`fixed top-0 right-0 h-screen w-64 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"} 
+          rounded-md transition-transform duration-500 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
+        
+        {/* Close Button */}
+        <button className="absolute right-6 top-6" onClick={toggleMenu}>
+          <FaTimes className="text-2xl" />
+        </button>
+
+        {/* Menu Links */}
+        <ul className="flex flex-col gap-4 py-20 px-10">
+          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            <li key={item}>
+              <a href={`#${item.toLowerCase()}`} className="hover:text-gray-400" onClick={toggleMenu}>
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
-      )}
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-
