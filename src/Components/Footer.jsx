@@ -98,7 +98,7 @@ const Footer = () => {
         {/* Resources Section */}
         <div>
           <h1 className="font-bold text-lg mb-4">RESOURCES</h1>
-          <ul className="space-y-3  dark:text-gray-300">
+          <ul className="space-y-3 ">
             <li className="hover:underline cursor-pointer">About</li>
             <li className="hover:underline cursor-pointer">Skill</li>
             <li className="hover:underline cursor-pointer">Project</li>
@@ -132,7 +132,7 @@ const Footer = () => {
         {/* Legal Section */}
         <div>
           <h1 className="font-bold text-lg mb-4">LEGAL</h1>
-          <ul className="space-y-3  dark:text-gray-300">
+          <ul className="space-y-3 ">
             <li className="hover:underline cursor-pointer">Privacy Policy</li>
             <li className="hover:underline cursor-pointer">Terms & Conditions</li>
           </ul>
@@ -144,7 +144,7 @@ const Footer = () => {
 
       {/* Copyright & Social Links */}
       <div className="flex flex-col sm:flex-row justify-between items-center py-6">
-        <p className="text-center  dark:text-gray-300">
+        <p className="text-center ">
           © 2024 Khemraj Saud. All Rights Reserved.
         </p>
         <div className="flex gap-6 mt-4 sm:mt-0">

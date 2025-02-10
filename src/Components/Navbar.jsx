@@ -2,6 +2,8 @@ import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../Components/Image/logo2.png";
 import { assets } from "./Assets";
+import { FaArrowRight } from "react-icons/fa";
+
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -21,7 +23,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
-        {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+        {["Home", "About", "Skills", "Projects", "Contacts"].map((item) => (
           <li key={item}>
             <a href={`#${item.toLowerCase()}`} className="hover:text-gray-400">
               {item}
@@ -38,10 +40,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </button>
 
     
-        <a className={`hidden md:block border border-gray-500 text-black rounded-full px-6 py-2 lg:flex items-center gap-3" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
+        <a className={`  border border-gray-500 text-black rounded-full px-8 py-2 flex items-center gap-5" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
           href="#contacts">
           Contact
-          <img src={assets.right_arrow} alt="Arrow" className="w-3" />
+         <FaArrowRight className="ml-3"/>
         </a>
 
         <button className="block md:hidden ml-3" onClick={toggleMenu}>
@@ -60,7 +62,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {/* Menu Links */}
         <ul className="flex flex-col gap-4 py-20 px-10">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+          {["Home", "About", "Skills", "Projects", "Contacts"].map((item) => (
             <li key={item}>
               <a href={`#${item.toLowerCase()}`} className="hover:text-gray-400" onClick={toggleMenu}>
                 {item}

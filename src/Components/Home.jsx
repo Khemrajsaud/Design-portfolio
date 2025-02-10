@@ -1,6 +1,7 @@
 import React from 'react'
 import myProfile from "../Components/Image/myProfile.png"
 import { assets } from './Assets'
+import { IoDownloadOutline } from "react-icons/io5";
 
 const Home = () => {
   return (
@@ -24,7 +25,7 @@ const Home = () => {
            <img src={assets.right_arrow} alt="" className='w-4' /></a>
 
            <a href="/sample-resume.pdf" download className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2'>My resume
-           <img src={assets.download_icon} alt="" className='w-4' /></a>
+          <IoDownloadOutline className='text-2xl'/></a>
       </div>
 
     </div>

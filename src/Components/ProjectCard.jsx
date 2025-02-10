@@ -6,9 +6,9 @@ const ProjectCard = () => {
   return (
     <div id="work" className="w-full px-[10%] py-16 ">
       {/* Section Heading */}
-      <h4 className="text-center text-lg text-gray-600 dark:text-gray-400">My Portfolio</h4>
-      <h2 className="text-center text-5xl font-bold text-gray-900 dark:text-white">My Latest Work</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 text-gray-600 dark:text-gray-400">
+      <h4 className="text-center text-lg">My Portfolio</h4>
+      <h2 className="text-center text-3xl lg:text-5xl font-bold">My Latest Work</h2>
+      <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
         Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
       </p>
 
