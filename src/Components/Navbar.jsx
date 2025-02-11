@@ -2,7 +2,7 @@ import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../Components/Image/logo2.png";
 import { assets } from "./Assets";
-import { FaArrowRight } from "react-icons/fa";
+
 
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
@@ -18,7 +18,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       
       {/* Logo */}
       <div className="text-2xl font-bold">
-        <img className="w-[100px]" src={logo} alt="Logo" />
+        <img className="w-[60px] lg:[100px]" src={logo} alt="Logo" />
       </div>
 
       {/* Desktop Menu */}
@@ -40,10 +40,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </button>
 
     
-        <a className={`  border border-gray-500 text-black rounded-full px-8 py-2 flex items-center gap-5" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
+        <a className={` hidden md:block  border border-gray-500 text-black rounded-full px-8 py-2 items-center gap-5" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
           href="#contacts">
-          Contact
-         <FaArrowRight className="ml-3"/>
+          Contact ➡️
+        
         </a>
 
         <button className="block md:hidden ml-3" onClick={toggleMenu}>
