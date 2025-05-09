@@ -21,6 +21,9 @@ import work_1 from './Image/work-1.png'
 import work_2 from './Image/work-2.png'
 import work_3 from './Image/work-2.png'
 import work_4 from './Image/work-3.png'
+import profileabout from "../Components/Image/aboutprofile.png"
+import projecta from "../Components/Image/projecta.png"
+import projectb from "../Components/Image/projectb.png"
 
 
 
@@ -32,7 +35,7 @@ export const assets = {
     close_white,hand_icon,
     download_icon,about_me,
     code_icon, code_icon_dark, edu_icon, edu_icon_dark , project_icon, project_icon_dark,vs_code,
-    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4
+    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb
   
 };
 
@@ -66,11 +69,11 @@ export const toolsData =[
 export const workData = [
     {
         title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: assets.work_1,
+        description: 'It is usually design for Skytop Academy for making user interactive and friendly',
+        bgImage: assets.projecta,
         links: {
-            site: "https://e-commercesiteshop.netlify.app/",
-            github: "https://github.com/Khemrajsaud",
+            site: "https://skytop-academy.vercel.app/",
+            github: "https://github.com/Khemrajsaud/skytop-website",
         },
     },
     {
@@ -83,11 +86,11 @@ export const workData = [
         },
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: assets.work_3,
+        title: 'E-commerce Website',
+        description: 'E-commerce website design used Reactjs and tailwind css. it is fully functionaly and user interface design',
+        bgImage: assets.projectb,
         links: {
-            site: "https://todoappdesign.netlify.app", // No link, but avoids undefined error
+            site: "https://e-commerce-five-mu-96.vercel.app/", 
             github: "#",
         },
     },

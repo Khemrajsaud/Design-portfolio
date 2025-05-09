@@ -1,24 +1,35 @@
-import React from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../Components/Image/logo2.png";
-import { assets } from "./Assets";
-
-
+import { useState } from "react";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaUser,
+  FaCode,
+  FaProjectDiagram,
+  FaEnvelope,
+} from "react-icons/fa";
+import { assets } from "./Assets"; // Make sure you have this file and assets
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between 
-        ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}>
-      
+    <nav
+      className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between 
+      ${
+        isDarkMode
+          ? "bg-gray-800 text-white shadow-md"
+          : "bg-white text-black shadow-md"
+      }`}
+    >
       {/* Logo */}
-      <div className="text-2xl font-bold">
-        <img className="w-[60px] lg:[100px]" src={logo} alt="Logo" />
+      <div className="text-2xl font-bold flex items-center">
+        <h1>Khem</h1>
+        <span>Raj</span>
       </div>
 
       {/* Desktop Menu */}
@@ -32,45 +43,107 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         ))}
       </ul>
 
-    
+      {/* Right-side Buttons */}
       <div className="flex items-center gap-4">
-      
+        {/* Theme Toggle */}
         <button onClick={() => setIsDarkMode((prev) => !prev)}>
-          <img src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Theme Toggle" className="w-6" />
+          <img
+            src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+            alt="Theme Toggle"
+            className="w-5"
+          />
         </button>
 
-    
-        <a className={` hidden md:block  border border-gray-500 text-black rounded-full px-8 py-2 items-center gap-5" ${isDarkMode ? "bg-gray-800 text-white shadow-md" : "bg-white text-black shadow-md"}`}
-          href="#contacts">
-          Contact ➡️
-        
+        {/* Resume Download Button */}
+        <a
+          href="/resume.pdf"
+          download
+          className={`hidden md:block border border-gray-500 rounded-full px-6 py-2 ${
+            isDarkMode ? "text-white bg-gray-700" : "text-black bg-white"
+          } hover:opacity-80`}
+        >
+          Download CV
         </a>
 
+        {/* Contact Button */}
+        <a
+          href="#contacts"
+          className={`hidden md:block border border-gray-500 rounded-full px-6 py-2 ${
+            isDarkMode ? "text-white bg-gray-700" : "text-black bg-white"
+          } hover:opacity-80`}
+        >
+          Contact ➡️
+        </a>
+
+        {/* Mobile Menu Icon */}
         <button className="block md:hidden ml-3" onClick={toggleMenu}>
-          <FaBars className="text-2xl" />
+          {isOpen ? (
+            <FaTimes className="text-2xl" />
+          ) : (
+            <FaBars className="text-2xl" />
+          )}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 h-screen w-64 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"} 
-          rounded-md transition-transform duration-500 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
-        
-        {/* Close Button */}
-        <button className="absolute right-6 top-6" onClick={toggleMenu}>
-          <FaTimes className="text-2xl" />
-        </button>
-
-        {/* Menu Links */}
-        <ul className="flex flex-col gap-4 py-20 px-10">
-          {["Home", "About", "Skills", "Projects", "Contacts"].map((item) => (
-            <li key={item}>
-              <a href={`#${item.toLowerCase()}`} className="hover:text-gray-400" onClick={toggleMenu}>
-                {item}
-              </a>
-            </li>
-          ))}
+      {isOpen && (
+        <ul
+          className={`absolute top-16 left-[100px] w-full md:hidden flex h-screen flex-col gap-4 pt-5 pl-[30px] shadow-lg ${
+            isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+          }`}
+        >
+          <li>
+            <a
+              href="#home"
+              onClick={toggleMenu}
+              className="flex items-center gap-2 hover:text-gray-400"
+            >
+              <FaHome /> Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              onClick={toggleMenu}
+              className="flex items-center gap-2 hover:text-gray-400"
+            >
+              <FaUser /> About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#skills"
+              onClick={toggleMenu}
+              className="flex items-center gap-2 hover:text-gray-400"
+            >
+              <FaCode /> Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#projects"
+              onClick={toggleMenu}
+              className="flex items-center gap-2 hover:text-gray-400"
+            >
+              <FaProjectDiagram /> Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contacts"
+              onClick={toggleMenu}
+              className="flex items-center gap-2 hover:text-gray-400"
+            >
+              <FaEnvelope /> Contacts
+            </a>
+          </li>
+          <a href="/resume.pdf" download>
+            <button className="border border-gray-500 rounded-full px-2 py-1 hover:opacity-80 mt-2">
+              Download CV
+            </button>
+          </a>
         </ul>
-      </div>
+      )}
     </nav>
   );
 };

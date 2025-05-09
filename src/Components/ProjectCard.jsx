@@ -1,19 +1,19 @@
-import React from "react";
+import  "react";
 import { FaArrowRight, FaGithub } from "react-icons/fa";
 import { workData } from "./Assets";
 
 const ProjectCard = () => {
   return (
-    <div id="work" className="w-full px-[10%] py-16 ">
+    <div id="work" className="w-full px-[10%]  ">
       {/* Section Heading */}
-      <h4 className="text-center text-lg">My Portfolio</h4>
-      <h2 className="text-center text-3xl lg:text-5xl font-bold">My Latest Work</h2>
+  
+      <h2 className="text-center text-3xl lg:text-4xl font-bold">My Latest Work</h2>
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
         Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
       </p>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {workData.map(({ title, description, bgImage, links }, index) => (
           <div key={index} className="bg-white dark:bg-gray-800 shadow-md rounded-lg overflow-hidden">
             {/* Project Image */}

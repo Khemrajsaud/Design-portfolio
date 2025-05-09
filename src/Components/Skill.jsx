@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import 'react';
 import { FaHtml5, FaCss3Alt, FaWordpress, FaGithub } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { RiReactjsFill, RiTailwindCssFill } from 'react-icons/ri';
@@ -19,18 +19,18 @@ const Skill = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="text-center">
-        <h1 className="text-3xl lg:text-5xl font-bold ">Skills</h1>
+        <h1 className="text-3xl lg:text-4xl font-bold ">Skills</h1>
         <p className="">
           These are the technologies I have learned
         </p>
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`bg-white dark:bg-gray-900 shadow-lg rounded-xl p-6 flex flex-col items-center  transition duration-300 hover:scale-105`}
+            className={`lg:bg-white dark:bg-gray-900 shadow-lg rounded-xl p-6 flex flex-col items-center  transition duration-300 hover:scale-105`}
           >
             <div className={`${skill.color} text-6xl`}>{skill.icon}</div>
             <p className="text-xl font-semibold mt-4 text-gray-900 dark:text-white">{skill.name}</p>
