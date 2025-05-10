@@ -4,12 +4,12 @@ import { workData } from "./Assets";
 
 const ProjectCard = () => {
   return (
-    <div id="work" className="w-full px-[10%]  ">
+    <div id="work" className="w-full px-[10%] lg:pt-1 pt-[80px]  ">
       {/* Section Heading */}
   
       <h2 className="text-center text-3xl lg:text-4xl font-bold">My Latest Work</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
-        Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.
+      <p className="text-center max-w-2xl mx-auto mt-5 mb-4 font-semibold">
+       Welcome to my web dev portfolio — a showcase of my best projects and skills in action!
       </p>
 
       {/* Projects Grid */}

@@ -8,8 +8,8 @@ const About = () => {
     <div className=' w-full px-[12%] pt-10'>
         
         
-         <h2 className='text-center text-2xl lg:text-4xl '>About me</h2>
-         <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-4'>
+         <h2 className='text-center text-3xl lg:text-4xl '>About me</h2>
+         <div className='flex w-full flex-col lg:flex-row items-center lg:gap-20 gap-8 my-4'>
           <div className='w-64 sm:w-80 rounded-3xl max-w-none' >
             <img src={assets.about_me} alt="user"  className='w-full rounded-3xl'/>
           </div>

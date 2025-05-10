@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import {
   FaBars,
   FaTimes,
@@ -11,7 +12,8 @@ import {
 import { assets } from "./Assets"; // Make sure you have this file and assets
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
-  const [isOpen, setIsOpen] = useState(false);
+
+const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -146,6 +148,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       )}
     </nav>
   );
+};
+Navbar.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  setIsDarkMode: PropTypes.func.isRequired,
 };
 
 export default Navbar;

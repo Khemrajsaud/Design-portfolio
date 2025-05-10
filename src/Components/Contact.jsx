@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import PropTypes from "prop-types";
+
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ isDarkMode }) => {
@@ -29,8 +31,10 @@ const Contact = ({ isDarkMode }) => {
         <h2 className="text-center text-3xl lg:text-4xl font-bold">
           Get in touch
         </h2>
-        <h4 className="text-center text-lg pt-4 font-semibold ">Connect with me</h4>
-       
+        <h4 className="text-center text-lg pt-4 font-semibold ">
+          Connect with me
+        </h4>
+
         {/* Contact Form */}
         <form ref={form} onSubmit={sendEmail} className="mt-6 space-y-4">
           <div className="flex flex-col  sm:flex-row sm:space-x-4 gap-2">
@@ -74,4 +78,7 @@ const Contact = ({ isDarkMode }) => {
   );
 };
 
+Contact.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};
 export default Contact;
