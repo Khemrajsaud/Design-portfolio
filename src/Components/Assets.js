@@ -24,7 +24,10 @@ import work_4 from './Image/work-3.png'
 import profileabout from "../Components/Image/aboutprofile.png"
 import projecta from "../Components/Image/projecta.png"
 import projectb from "../Components/Image/projectb.png"
-
+import task from "../Components/Image/task.png";
+import skytopacademy from "../Components/Image/skytopacademy.png";
+import calculater from "../Components/Image/calculater.png"
+import todo from "../Components/Image/todo.png";
 
 
 export const assets = {
@@ -35,7 +38,7 @@ export const assets = {
     close_white,hand_icon,
     download_icon,about_me,
     code_icon, code_icon_dark, edu_icon, edu_icon_dark , project_icon, project_icon_dark,vs_code,
-    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb
+    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb,task,skytopacademy,calculater,todo
   
 };
 
@@ -68,21 +71,21 @@ export const toolsData =[
 
 export const workData = [
     {
-        title: 'Frontend project',
+        title: 'Skytop Academy',
         description: 'It is usually design for Skytop Academy for making user interactive and friendly',
-        bgImage: assets.projecta,
+        bgImage: assets.skytopacademy,
         links: {
-            site: "https://skytop-academy.vercel.app/",
+            site: "https://skytop-jet.vercel.app/",
             github: "https://github.com/Khemrajsaud/skytop-website",
         },
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: assets.work_2,
+        title: 'Task Management',
+        description: 'This Task Management project is built with a Node.js backend and a React.js frontend, styled using Tailwind CSS. It allows users to add, edit, complete/incomplete, and delete tasks easily. The app features a clean, responsive UI for smooth user interaction. Backend APIs handle all task data operations securely. This project showcases my skills in full-stack development and building functional CRUD applications.',
+        bgImage: assets.task,
         links: {
-            site: "https://todoappdesign.netlify.app",
-            github: "#",
+            site: "https://taskmanagement-h59r.vercel.app/",
+            github: "https://github.com/Khemrajsaud/taskmanagement",
         },
     },
     {
@@ -95,12 +98,21 @@ export const workData = [
         },
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: assets.work_4,
+        title: 'Calculater Design ',
+        description: 'Design Calculater used Javascript and HTML and CSS',
+        bgImage: assets.calculater,
         links: {
-            site: "https://todoappdesign.netlify.app",
-            github: "#",
+            site: "https://newmoderncalculator.netlify.app/",
+            github: "https://github.com/Khemrajsaud/Calculator",
+        },
+    },
+    {
+        title: 'To-Do app ',
+        description: 'Design Calculater used ReactJS and TailwindCSS',
+        bgImage: assets.todo,
+        links: {
+            site: "https://todoappdesign.netlify.app/",
+            github: "https://github.com/Khemrajsaud/Todolist-app",
         },
     },
 ];
