@@ -28,6 +28,7 @@ import task from "../Components/Image/task.png";
 import skytopacademy from "../Components/Image/skytopacademy.png";
 import calculater from "../Components/Image/calculater.png"
 import todo from "../Components/Image/todo.png";
+import sopecart from "../Components/Image/shopcart.png"
 
 
 export const assets = {
@@ -38,7 +39,7 @@ export const assets = {
     close_white,hand_icon,
     download_icon,about_me,
     code_icon, code_icon_dark, edu_icon, edu_icon_dark , project_icon, project_icon_dark,vs_code,
-    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb,task,skytopacademy,calculater,todo
+    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb,task,skytopacademy,calculater,todo,sopecart
   
 };
 
@@ -89,12 +90,12 @@ export const workData = [
         },
     },
     {
-        title: 'E-commerce Website',
-        description: 'E-commerce website design used Reactjs and tailwind css. it is fully functionaly and user interface design',
-        bgImage: assets.projectb,
+        title: 'Mern Stack E-commerce Website',
+        description: 'This project is a fully functional MERN-stack e-commerce website built using Next.js with Tailwind CSS and ShadCN UI for modern design. It features Clerk authentication for secure login and user management. The product data and categories are managed using Sanity.io as the headless CMS. Key functionalities include adding and deleting products, managing product categories, and favoriting products. The platform is designed to be scalable, responsive, and user-friendly.',
+        bgImage: assets.sopecart,
         links: {
-            site: "https://e-commerce-five-mu-96.vercel.app/", 
-            github: "#",
+            site: "https://shop-cart-xv9g.vercel.app/", 
+            github: "https://github.com/Khemrajsaud/ShopCart",
         },
     },
     {
