@@ -7,3 +7,10 @@
 body{
     font-family: "Archivo", sans-serif;
 }
+
+.custom-gradient-shadow {
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4), /* Blue */
+              0 6px 30px rgba(147, 51, 234, 0.3), /* Purple */
+              0 8px 40px rgba(79, 70, 229, 0.3);  /* Indigo */
+}
+

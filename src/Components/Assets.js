@@ -29,6 +29,8 @@ import skytopacademy from "../Components/Image/skytopacademy.png";
 import calculater from "../Components/Image/calculater.png"
 import todo from "../Components/Image/todo.png";
 import sopecart from "../Components/Image/shopcart.png"
+import website from "../Components/Image/website.png";
+
 
 
 export const assets = {
@@ -39,7 +41,7 @@ export const assets = {
     close_white,hand_icon,
     download_icon,about_me,
     code_icon, code_icon_dark, edu_icon, edu_icon_dark , project_icon, project_icon_dark,vs_code,
-    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb,task,skytopacademy,calculater,todo,sopecart
+    mongodb, firebase, git,figma,work_1,work_2,work_3,work_4,profileabout,projecta,projectb,task,skytopacademy,calculater,todo,sopecart, website
   
 };
 
@@ -116,5 +118,40 @@ export const workData = [
             github: "https://github.com/Khemrajsaud/Todolist-app",
         },
     },
+    {
+        title: 'Website Design ',
+        description: 'Design Website Tailwind css , ReactJS with motion animation',
+        bgImage: assets.website,
+        links: {
+            site: "https://web-ten-beta-48.vercel.app/",
+            github: "https://github.com/Khemrajsaud/web",
+        },
+    },
+
 ];
+
+export const educationData = [
+  {
+    degree: "Bachelor of Information Technology (BIT)",
+    institution: "Texas College of Management & IT",
+    year: "2022 - 2026",
+    details: [
+      "Specialization in software development and web technologies",
+      "Focused on MERN stack, cloud, and mobile app development"
+    ]
+  },
+  {
+    degree: "Higher Secondary Education",
+    institution: "ABC Higher Secondary School",
+    year: "2020 - 2022",
+    details: [
+      "Science stream with Computer Science major"
+    ]
+  }
+];
+
+
+
+
+
 
