@@ -23,7 +23,7 @@ const ProjectCard = () => {
         <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-6">
           My Latest Work
         </h2>
-        <p className="text-center max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+        <p className="text-center max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-500 leading-relaxed">
           Welcome to my web dev portfolio — a showcase of my best projects and skills in action!
         </p>
         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
