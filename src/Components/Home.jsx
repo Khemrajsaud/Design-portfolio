@@ -2,6 +2,7 @@ import  'react';
 import PropTypes from 'prop-types';
 import { IoDownloadOutline } from "react-icons/io5";
 import  assets  from '../Components/Image/myProfile.png'; 
+import rightarrow from "../Components/Image/right-arrow-white.png";
 
 const Home = ({ isDarkMode }) => {
   const greetingText = "Hi ! I'm Khemraj Saud";
@@ -68,7 +69,7 @@ const Home = ({ isDarkMode }) => {
         >
           Contact me
           <img 
-            src={assets.right_arrow || "/placeholder.svg?height=16&width=16&text=→"} 
+            src={rightarrow} 
             alt="arrow" 
             className='w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300' 
           />
